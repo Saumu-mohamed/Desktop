@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starlink | High-Speed Internet Worldwide</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #000000;
+            --secondary: #ffffff;
+            --accent: #005288;
+            --highlight: #e82127;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            color: var(--primary);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--highlight);
+            color: var(--secondary);
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #c11a20;
+            transform: translateY(-2px);
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        .logo span {
+            color: var(--highlight);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1624438787640-7b1442b033fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--secondary);
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 20px;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Plans Section */
+        .plans {
+            padding: 80px 0;
+            background-color: #f5f5f5;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 36px;
+        }
+        
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .plan-card {
+            background-color: var(--secondary);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .plan-header {
+            background-color: var(--accent);
+            color: var(--secondary);
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .plan-header h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        
+        .plan-body {
+            padding: 30px;
+        }
+        
+        .plan-price {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--highlight);
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .plan-features li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .plan-features li:before {
+            content: "✓";
+            color: var(--highlight);
+            position: absolute;
+            left: 0;
+        }
+        
+        /* Business Section */
+        .business {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            color: var(--secondary);
+        }
+        
+        .business-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .business h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .business p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        /* Setup Section */
+        .setup {
+            padding: 80px 0;
+            background-color: var(--secondary);
+        }
+        
+        .setup-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+        
+        .step {
+            text-align: center;
+        }
+        
+        .step-icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: var(--highlight);
+        }
+        
+        .step h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: #f5f5f5;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature {
+            background-color: var(--secondary);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--highlight);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column a {
+            color: var(--secondary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column a:hover {
+            color: var(--highlight);
+        }
+        
+        .newsletter {
+            margin-top: 20px;
+        }
+        
+        .newsletter input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: none;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">STARLINK<span>.</span></div>
+                <ul class="nav-links">
+                    <li><a href="#residential">Residential</a></li>
+                    <li><a href="#roam">Roam</a></li>
+                    <li><a href="#business">Business</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#setup">Setup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>HIGH-SPEED INTERNET AROUND THE WORLD</h1>
+            <p>Connect at home or on the go with Starlink's revolutionary satellite internet service.</p>
+            <a href="#plans" class="btn">VIEW PLANS</a>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans" id="plans">
+        <div class="container">
+            <h2 class="section-title">Choose Your Plan</h2>
+            <div class="plans-grid">
+                <!-- Residential Plan -->
+                <div class="plan-card" id="residential">
+                    <div class="plan-header">
+                        <h3>Residential</h3>
+                        <p>Connect at home</p>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-price">Starting at Ksh4,000/mo</div>
+                        <ul class="plan-features">
+                            <li>High-speed, low-latency internet</li>
+                            <li>Unlimited data</li>
+                            <li>Easy self-installation</li>
+                            <li>24/7 customer support</li>
+                            <li>Perfect for streaming, gaming & more</li>
+                        </ul>
+                        <a href="#" class="btn">ORDER NOW</a>
+                    </div>
+                </div>
+                
+                <!-- Roam Plan -->
+                <div class="plan-card" id="roam">
+                    <div class="plan-header">
+                        <h3>Roam</h3>
+                        <p>Connect while traveling</p>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-price">Starting at Ksh6,500/mo</div>
+                        <ul class="plan-features">
+                            <li>Global coverage in over 100 markets</li>
+                            <li>Portable hardware</li>
+                            <li>No long-term contracts</li>
+                            <li>Pause service anytime</li>
+                            <li>Ideal for RV, marine & remote work</li>
+                        </ul>
+                        <a href="#" class="btn">ORDER NOW</a>
+                    </div>
+                </div>
+                
+                <!-- Business Plan -->
+                <div class="plan-card" id="business">
+                    <div class="plan-header">
+                        <h3>Business</h3>
+                        <p>Premium connectivity</p>
+                    </div>
+                    <div class="plan-body">
+                        <div class="plan-price">Contact for Pricing</div>
+                        <ul class="plan-features">
+                            <li>Priority network access</li>
+                            <li>Enhanced support</li>
+                            <li>Higher performance hardware</li>
+                            <li>Dedicated account management</li>
+                            <li>Perfect for enterprises & institutions</li>
+                        </ul>
+                        <a href="#" class="btn">CONTACT SALES</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Section -->
+    <section class="business">
+        <div class="container">
+            <div class="business-content">
+                <h2>STARLINK FOR BUSINESSES AND POWER USERS</h2>
+                <p>Reliable high-speed internet designed to keep businesses connected. Get connectivity where you least expect it.</p>
+                <p>Streaming, video calls, online gaming, remote working and more are now possible in even the most remote locations thanks to the world's most advanced internet system.</p>
+                <a href="#" class="btn">LEARN MORE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Setup Section -->
+    <section class="setup" id="setup">
+        <div class="container">
+            <h2 class="section-title">GET ONLINE IN MINUTES</h2>
+            <p class="text-center">Set up Starlink with just two steps. Instructions work in either order:</p>
+            
+            <div class="setup-steps">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h3>PLUG IT IN</h3>
+                    <p>Simply connect your Starlink kit to power</p>
+                </div>
+                
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h3>POINT AT SKY</h3>
+                    <p>Starlink requires an unobstructed view of the sky</p>
+                </div>
+            </div>
+            
+            <p class="text-center" style="margin-top: 40px;">Download the Starlink app to determine your best install location.</p

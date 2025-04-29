@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple User Form</title>
+</head>
+<body>
+
+  <h2>Tell Us About Yourself</h2>
+
+  <form action="/submit-user-info" method="post">
+    <div>
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" placeholder="Your full name">
+    </div>
+    <br>
+    <div>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="Your email address">
+    </div>
+    <br>
+    <div>
+      <label for="age">Age:</label><br>
+      <input type="number" id="age" name="age" min="0" max="120" placeholder="Your age">
+    </div>
+    <br>
+    <div>
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other">Other</label>
+    </div>
+    <br>
+    <div>
+      <label for="country">Country:</label><br>
+      <select id="country" name="country">
+        <option value="">-- Select a country --</option>
+        <option value="ke">Kenya</option>
+        <option value="ug">Uganda</option>
+        <option value="tz">Tanzania</option>
+        <option value="rw">Rwanda</option>
+        <option value="bi">Burundi</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <label for="message">Message:</label><br>
+      <textarea id="message" name="message" rows="4" placeholder="Your message"></textarea>
+    </div>
+    <br>
+    <div>
+      <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+      <label for="subscribe">Subscribe to our newsletter</label>
+    </div>
+    <br>
+    <button type="submit">Submit Information</button>
+  </form>
+
+</body>
+</html>
