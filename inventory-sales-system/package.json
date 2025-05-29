@@ -1,0 +1,11 @@
+{
+  "name": "inventory-sales-system",
+  "version": "1.0.0",
+  "description": "A Node.js console-based inventory and sales management system for an electronics store.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Saumu Mohamed",
+  "license": "ISC"
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Find Book</title>
+</head>
+<body>
+  <h2>Book Finder</h2>
+  <p id="output1"></p>
+  <p id="output2"></p>
+
+  <script>
+    function findBook(libraryList, targetTitle) {
+      for (let i = 0; i < libraryList.length; i++) {
+        if (libraryList[i] === targetTitle) {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    let list1 = ["Moby Dick", "War and Peace", "The Great Gatsby"];
+    let target1 = "1984";
+    let result1 = findBook(list1, target1);
+    document.getElementById("output1").innerText = 
+      `"${target1}" found: ${result1}`;
+
+    let list2 = ["Moby Dick", "War and Peace", "The Great Gatsby"];
+    let target2 = "War and Peace";
+    let result2 = findBook(list2, target2);
+    document.getElementById("output2").innerText = 
+      `"${target2}" found: ${result2}`;
+  </script>
+</body>
+</html>

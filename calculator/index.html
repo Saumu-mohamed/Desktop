@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Web Calculator</title>
+    <link rel ="stylesheet" href="style.css">
+        
+</head>
+<body>
+    <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+    <div class="calculator">
+        <div class="display">
+            <div class="history-panel" id="history"></div>
+            <div class="current" id="display">0</div>
+        </div>
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="appendParenthesis('(')">(</button>
+            <button onclick="appendParenthesis(')')">)</button>
+            <button onclick="backspace()">←</button>
+            <button onclick="memoryOperation('MC')">MC</button>
+            <button onclick="memoryOperation('MR')">MR</button>
+            <button onclick="memoryOperation('M+')">M+</button>
+            <button onclick="memoryOperation('M-')">M-</button>
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('÷')">÷</button>
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('×')">×</button>
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendOperator('–')">–</button>
+            <button onclick="appendNumber('0')">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+        </div>
+    </div>
+    <script  src ="script.js"></script>
+    
+        
+
+        
+    </script>
+</body>
+</html>
+
+<xaiArtifact artifact_id="e7429fff-0ac0-4b52-ad2c-fcf72edf25c3" artifact_version_id="d04ed398-1d80-4886-a88a-633e6496da3d" title="README.md" contentType="text/markdown">
+# Interactive Web Calculator
+
+## Overview
+This is a fully functional, responsive web-based calculator built with HTML, CSS, and JavaScript. It supports basic arithmetic operations, decimal calculations, parentheses, memory functions, and a calculation history panel. The calculator features a light/dark mode toggle and keyboard support for enhanced usability.
+
+## Features
+- **Basic Operations**: Addition (+), subtraction (–), multiplication (×), division (÷).
+- **Advanced Features**:
+  - Parentheses for grouping expressions (e.g., `(5 + 3) × 2`).
+  - Memory functions: M+ (add to memory), M- (subtract from memory), MR (recall memory), MC (clear memory).
+  - Calculation history panel to log completed calculations.
+  - Light/dark mode toggle using CSS variables.
+  - Keyboard support for numbers, operators, Enter (calculate), Backspace, and Escape (clear).
+- **Responsive Design**: Adapts to desktop and mobile viewports.
+- **Error Handling**: Prevents invalid inputs (e.g., multiple decimals, consecutive operators) and displays errors for invalid calculations.
+- **Styling**: Grid-based button layout, hover effects, active-press animations, and dynamic font sizing for large

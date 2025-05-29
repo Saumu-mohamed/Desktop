@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Automated Greeter</title>
+</head>
+<body>
+
+  <h1>Attendee Welcome Messages</h1>
+  <div id="output"></div>
+
+  <script>
+    function displayWelcomeBadges(attendeeList) {
+      const outputDiv = document.getElementById("output");
+
+      for (let i = 0; i < attendeeList.length && i < 100; i++) {
+        const message = `Welcome, ${attendeeList[i]}!`;
+
+        const p = document.createElement("p");
+        p.textContent = message;
+
+        outputDiv.appendChild(p);
+      }
+    }
+
+    const attendees = [];
+    for (let i = 1; i <= 150; i++) {
+      attendees.push(`Attendee${i}`);
+    }
+    
+    displayWelcomeBadges(attendees);
+  </script>
+
+</body>
+</html>

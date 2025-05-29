@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Temperature Monitoring</title>
+</head>
+<body>
+  <h2>Temperature Monitor</h2>
+  <div id="output"></div>
+
+  <script>
+    function monitorTemperature(temperatureStream) {
+      let outputElement = document.getElementById("output");
+
+      for (let i = 0; i < temperatureStream.length; i++) {
+        let temp = temperatureStream[i];
+
+        let reading = document.createElement("p");
+        reading.innerText = "Reading: " + temp;
+        outputElement.appendChild(reading);
+
+        if (temp < 0) {
+          let alert = document.createElement("p");
+          alert.innerText = "ALERT: Temperature below zero!";
+          alert.style.color = "red";
+          outputElement.appendChild(alert);
+          break; 
+        }
+      }
+    }
+
+    let temperatures = [15, 12, 10, 5, 2, 0, -3, 5];
+    monitorTemperature(temperatures);
+  </script>
+</body>
+</html>

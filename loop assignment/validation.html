@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Valid Age Checker</title>
+</head>
+<body>
+  <h2>Check Your Age</h2>
+  <p id="result"></p>
+
+  <script>
+    function getValidAge() {
+      while (true) {
+        let input = prompt("Enter your age:");
+        let age = parseInt(input);
+e
+        if (isNaN(age) || age <= 0) {
+          alert("Invalid input. Please enter a positive number.");
+        } else {
+          return age;
+        }
+      }
+    }
+    let validAge = getValidAge();
+    document.getElementById("result").innerText = 
+      "Your valid age is: " + validAge;
+  </script>
+</body>
+</html>

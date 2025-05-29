@@ -121,6 +121,7 @@ nav ul li .cta:hover {
     box-shadow: 0 2px 18px #00cfff22;
     margin-bottom: 1.5rem;
     transition: transform 0.2s;
+    align-content: center;
 }
 .feature-card:hover {
     transform: translateY(-8px) scale(1.03);
@@ -200,6 +201,7 @@ nav ul li .cta:hover {
     transition: background 0.2s, color 0.2s;
     vertical-align: bottom;
     margin-top:0px;
+    align-items: center;ss
 }
 .bt:hover{
     color:#000 ;
