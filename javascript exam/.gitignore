@@ -1,0 +1,19 @@
+# Ignore CVs and personal pages
+cv.html
+cv2.html
+curriculum vitae/
+test.html
+
+# Ignore temp and backup files
+*.log
+*.tmp
+*.bak
+
+# Node.js
+node_modules/
+
+# macOS junk
+.DS_Store
+
+# VS Code settings
+.vscode/
